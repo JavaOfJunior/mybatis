@@ -27,7 +27,6 @@
     </settings>  
     
     <mappers>
-       <!--<mapper resource="com/pmcc/soft/core/organization/organizationMapper.xml" />  -->
-
+       <!--<mapper resource="com.henu.organization.personMapperr.xml" />-->
     </mappers>
 </configuration>  

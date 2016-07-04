@@ -15,6 +15,7 @@
 	http://www.springframework.org/schema/task/spring-task-3.2.xsd">
 
 
+	<context:component-scan base-package="com.henu" />
 
 	<bean
 			class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
@@ -24,19 +25,6 @@
 			</list>
 		</property>
 	</bean>
-
-	<!-- json转换器 -->
-
-	<bean
-			class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
-		<property name="messageConverters">
-			<list>
-				<bean
-						class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"></bean>
-			</list>
-		</property>
-	</bean>
-
 	<bean
 			class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix">
@@ -70,13 +58,9 @@
 	<tx:annotation-driven transaction-manager="transactionManager" />
 
 	<!--MyBatis config -->
-	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+<!--	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
 		<property name="configLocation" value="classpath:orm-config.xml" />
-	</bean>
-	<!-- 文件上传 -->
-	<bean id="multipartResolver"
-		  class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
-		<property name="maxUploadSize" value="500000000"></property>
-	</bean>
+	</bean>-->
+
 </beans>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.henu.organization.personMapper   " >
+
+    <resultMap id="personManageMap" type="com.henu.organization.entry.Person">
+        <id property="id" column="oid" />
+        <result property="userEname" column="USER_ENAME"/>
+        <result property="md5Pwd" column="MD5PWD"/>
+    </resultMap>
+
+    <sql id="sql_columns">
+        OID,USER_ENAME,MD5PWD
+    </sql>
+    <sql id="sql_table">PERSON</sql>
+    <sql id="sql_where">where
+        <if test=" userEname != null" >
+            USER_ENAME = #{userEname}
+        </if>
+    </sql>
+
+    <select id="query" resultMap="personManageMap"  >
+        select
+        <include refid="sql_columns"/>
+        from
+        <include refid="sql_table"/>
+        <include refid="sql_where"/>
+    </select>
+</mapper>
