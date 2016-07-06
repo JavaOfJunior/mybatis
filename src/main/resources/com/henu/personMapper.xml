@@ -16,7 +16,6 @@
             USER_ENAME = #{userEname}
         </if>
     </sql>
-
     <select id="query" resultMap="personManageMap"  >
         select
         <include refid="sql_columns"/>
