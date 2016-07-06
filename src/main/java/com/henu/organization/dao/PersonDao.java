@@ -11,7 +11,7 @@ import java.util.List;
  */
 @Repository
 public class PersonDao  extends SqlSessionDaoSupport {
-    public static final String NAME_SPACE = "com.henu.personMapper";
+    public static final String NAME_SPACE = "com/henu/personMapper";
 
     public List<Person> find(Person object){
         return getSqlSession().selectList(NAME_SPACE + ".query",object);

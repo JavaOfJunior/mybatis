@@ -29,8 +29,7 @@ public class PersonController {
     public  Map<String, Object>  login(HttpServletRequest request,
                         String userName, String passWord){
 
-        passWord="dd";
-        System.out.println("dd"+passWord);
+      userName="admin";
       logger.info(userName+"正在登陆系统...");
         Map<String, Object> model = new HashMap<String, Object>();
         Person p=new Person();p.setUserEname(userName);p.setMd5Pwd(passWord);
