@@ -2,8 +2,8 @@ package com.henu.organization.controller;
 
 import com.henu.organization.entry.Person;
 import com.henu.organization.manager.PersonManager;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+//import org.slf4j.Logger;
+//import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,15 +23,18 @@ public class PersonController {
 
 //    protected final Logger logger = LoggerFactory.getLogger(getClass());
 
-    @Autowired
-    PersonManager personManager;
-    @RequestMapping(value = "/login", method = RequestMethod.POST)
+//    @Autowired
+//    PersonManager personManager;
+    @RequestMapping("login")
     @ResponseBody
     public  Map<String, Object>  login(HttpServletRequest request,
                         String userName, String passWord){
-//        logger.info(userName+"正在登陆系统...");
-        Map<String, Object> model = new HashMap<String, Object>();
-        Person p=new Person();p.setUserEname(userName);p.setMd5Pwd(passWord);
+
+        passWord="dd";
+        System.out.println("dd"+passWord);
+////        logger.info(userName+"正在登陆系统...");
+//        Map<String, Object> model = new HashMap<String, Object>();
+//        Person p=new Person();p.setUserEname(userName);p.setMd5Pwd(passWord);
 //        Person person = null;
 //        person = personManager.find(p);
 //        if(person!=null) {
@@ -42,6 +45,6 @@ public class PersonController {
 //            model.put("loginMsg", "登录失败:用户名或密码错误!");
 //            return model;
 //        }
-    return  null;
+        return null;
     }
 }
