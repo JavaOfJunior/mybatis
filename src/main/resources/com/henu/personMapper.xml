@@ -7,7 +7,6 @@
         <result property="userEname" column="USER_ENAME"/>
         <result property="md5Pwd" column="MD5PWD"/>
     </resultMap>
-
     <sql id="sql_columns">
         OID,USER_ENAME,MD5PWD
     </sql>
