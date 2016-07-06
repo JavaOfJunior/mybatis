@@ -26,6 +26,6 @@
         <setting name="logImpl" value="LOG4J"/>
     </settings>-->
     <mappers>
-       <mapper resource="com.henu.organization.personMapperr.xml" />
+       <mapper resource="com.henu.personMapperr.xml" />
     </mappers>
 </configuration>  
