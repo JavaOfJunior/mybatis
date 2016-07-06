@@ -15,6 +15,5 @@ public class PersonDao  extends SqlSessionDaoSupport {
 
     public List<Person> find(Person object){
         return getSqlSession().selectList(NAME_SPACE + ".query",object);
-
     }
 }
