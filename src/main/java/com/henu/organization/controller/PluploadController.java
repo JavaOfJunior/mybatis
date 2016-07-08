@@ -59,7 +59,6 @@ public class PluploadController {
 			if (!folder.exists()) {
 				folder.mkdirs();
 			}
-			
 			//目标文件 
 			File destFile = new File(folder, name);
 			//文件已存在删除旧文件（上传了同名的文件） 
