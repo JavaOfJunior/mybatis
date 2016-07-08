@@ -37,14 +37,14 @@ public class PluploadServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doPost(request, response);
 	}
-
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		try {
 			boolean isMultipart = ServletFileUpload.isMultipartContent(request);
 			if(isMultipart){
 				String fileName = "";
 				Integer chunk = 0, chunks = 0;
-				
+
+
 				//检查文件目录，不存在则创建
 				String relativePath = "/plupload/files/";
 				String realPath = request.getSession().getServletContext().getRealPath("");
