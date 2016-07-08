@@ -73,7 +73,6 @@ public class PluploadController {
 	        }else {
 	        	logger.info("还剩["+(chunks-1-chunk)+"]个块文件");
 	        }
-			
 		} catch (IOException e) {
 			logger.error(e.getMessage());
 		}
