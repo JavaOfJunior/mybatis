@@ -43,6 +43,7 @@ public class PersonController {
             return model;
         }
     }
+
     @RequestMapping("/show")
     public String openShow(){
         return  "show";
