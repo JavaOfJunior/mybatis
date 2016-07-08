@@ -28,7 +28,6 @@ public class PersonController {
     @ResponseBody
     public  Map<String, Object>  login(HttpServletRequest request,
                         String userName, String passWord){
-
       userName="admin";
       logger.info(userName+"正在登陆系统...");
         Map<String, Object> model = new HashMap<String, Object>();
